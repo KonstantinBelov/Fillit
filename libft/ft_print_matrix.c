@@ -1,45 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fillit_2.c                                         :+:      :+:    :+:   */
+/*   ft_print_matrix.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbelov <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/25 19:36:26 by kbelov            #+#    #+#             */
-/*   Updated: 2019/03/29 02:11:02 by kbelov           ###   ########.fr       */
+/*   Created: 2019/04/05 23:02:53 by kbelov            #+#    #+#             */
+/*   Updated: 2019/04/07 00:21:37 by kbelov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#include "fillit.h"
-
-int			fillit()
+void		ft_print_matrix(char **matrix)
 {
-	
-char		**place_tms(t_tetrimino *tms, board)
-{
-	
+	int		y;
+	int		x;
 
-
-char		**set_board(short board_size)
-{
-	char	board[board_size][board_size + 1];
-	char	board_row[board_size + 1];
-	short	i;
-	char	*tmp;
-
-	i = -1;
-	while (i++ < board_size)
-		board_row[i] = '.';
-	board_row[i] = '\n';
-	i = 0;
-	while (i < board_size)
+	y = -1;
+	while (matrix[++y])
 	{
-		tmp = ft_strdup(board_row);
-		board[i] = tmp;
-		i++;
+		x = -1;
+		while (matrix[y][++x])
+			write(1, &matrix[y][x], 1);
 	}
-	return (board);
+	write(1, "\n", 1);
 }
-
-

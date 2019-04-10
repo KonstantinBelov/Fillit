@@ -6,7 +6,7 @@
 /*   By: kbelov <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 15:11:11 by kbelov            #+#    #+#             */
-/*   Updated: 2019/03/27 18:57:20 by kbelov           ###   ########.fr       */
+/*   Updated: 2019/04/05 23:34:10 by kbelov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,10 +94,11 @@ size_t				ft_word_len(char const *s, size_t start, char c);
 int					ft_isspace(char c);
 int					ft_abs(int n);
 
-int					get_next_line(const int fd, char **line);
 int					ft_putline(char **files, char **lines, int fd, int rd);
 
 int					ft_sqrt_rounded_up(int n);
 int					ft_find_index(char *s, char c, int oc);
+int					ft_max(int a, int b);
+void				ft_print_matrix(char **matrix);
 
 #endif
