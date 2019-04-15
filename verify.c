@@ -6,7 +6,7 @@
 /*   By: kbelov <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 10:46:39 by kbelov            #+#    #+#             */
-/*   Updated: 2019/04/08 11:04:05 by kbelov           ###   ########.fr       */
+/*   Updated: 2019/04/11 01:54:23 by kbelov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int			verify_chars(char *tetr)
 {
-	short	i;
+	int	i;
 
 	i = 0;
 	while (i < 16)
@@ -28,9 +28,9 @@ int			verify_chars(char *tetr)
 
 int			verify_connections(char *tetr)
 {
-	short	number_of_blocks;
-	short	number_of_connections;
-	short	j;
+	int		number_of_blocks;
+	int		number_of_connections;
+	int		j;
 
 	number_of_connections = 0;
 	number_of_blocks = 0;
@@ -57,7 +57,7 @@ int			verify_connections(char *tetr)
 int			verify_tetrimino(char *t)
 {
 	char		tetr[16];
-	short		k;
+	int			k;
 
 	if (t[4] != '\n' || t[9] != '\n' || t[14] != '\n' || t[19] != '\n')
 		return (0);

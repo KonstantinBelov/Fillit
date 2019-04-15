@@ -6,14 +6,14 @@
 /*   By: kbelov <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/18 17:10:39 by kbelov            #+#    #+#             */
-/*   Updated: 2019/04/09 18:02:32 by kbelov           ###   ########.fr       */
+/*   Updated: 2019/04/11 01:53:38 by kbelov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
 char			**g_tetriminos;
-short			g_num;
+int				g_num;
 t_tetrimino		g_tms[26];
 
 int			verify_input(int fd)
@@ -21,7 +21,7 @@ int			verify_input(int fd)
 	extern char		**g_tetriminos;
 	char			buf[FILE_SIZE_FILLIT + 1];
 	int				bytes_read;
-	short			i;
+	int				i;
 	char			*file;
 
 	bytes_read = read(fd, buf, FILE_SIZE_FILLIT + 1);
@@ -49,7 +49,7 @@ int			main(int ac, char *av[])
 {
 	extern t_tetrimino	g_tms[26];
 	int					fd;
-	short				i;
+	int					i;
 
 	fd = open(av[1], O_RDONLY);
 	if (ac == 2)
